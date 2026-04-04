@@ -4,8 +4,10 @@ import requests
 # =========================
 # TOKENS / KEYS
 # =========================
-TELEGRAM_TOKEN = "8666018703:AAFZndrEr49KqcSc7SmXlBNMi1TLQVHuMD4"
-ALPHA_VANTAGE_KEY = "BKPI10EVCQO9M7V7"
+import os
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+ALPHA_VANTAGE_KEY = os.getenv("ALPHA_VANTAGE_KEY")
 
 TG_BASE = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}"
 CG_BASE = "https://api.coingecko.com/api/v3"
